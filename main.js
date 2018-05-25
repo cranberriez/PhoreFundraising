@@ -15,7 +15,14 @@ function getBalance() {
     processData: false,
     success: function(data, textStatus, jQxhr) {
       let balance = 0;
+      let prevtxs = {};
       for (let tx of data.result) {
+	prevtxs[tx.txid] = tx;
+        for (let vin of tx.vin) {
+          if (prevtxs.hasOwnProperty(vin.txid)) {
+            balance -= prevtxs[vin.txid].vout[vin.vout].value;
+	  }
+	}
         for (let vout of tx.vout) {
           if (vout.scriptPubKey.addresses && vout.scriptPubKey.addresses.indexOf(ADDR) != -1) {
             balance += vout.value;
