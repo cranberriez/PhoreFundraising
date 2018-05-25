@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="shortcut icon" href="./imgs/phoresmall.png">
+    <link rel='stylesheet' href='style.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Prompt" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Main</title>
+  </head>
+  <body>
+    <div class='m-container'>
+      <button class='refresh' onclick="getBalance()"><i class="fas fa-sync-alt"></i></button>
+      <header>
+        <h1>Phore Exchange Listing</h1>
+        <p>Bring Phore to new horizons!</p>
+      </header>
+      <div class="circle" id="circle">
+        <div class='text'>
+          <h1 id='balance'>...</h1>
+          <h2>Phore Raised</h2>
+          <hr/>
+          <h3>Of 50,000 Goal</h3>
+          <button class='donateB'>Donate!</button>
+        </div>
+      </div>
+      <div class='donate-pop hidden'>
+        <div class='ptext'>
+          <h4>Phore Addresss</h4>
+          <img src='./imgs/qrCode.png' height='300px'>
+          <textarea readonly autocorrect="off" autocapitalize="off" spellcheck="false" class='address'>PNvGNe9b8FCyt5aVnB12Z6AjaKNXvU77Ca</textarea>
+          <div class='copytext'>Copied!</div>
+          <button class='close'>X</button>
+        </div>
+      </div>
+      <!-- <div class='learnmore'>Learn More</div> -->
+    </div>
+    <!-- <div class='m-container'>
+    </div> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src='circle-progress.min.js'></script>
+    <script src='main.js'></script>
+  </body>
+</html>
