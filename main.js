@@ -23,9 +23,9 @@ function getBalance() {
         }
       }
       console.log(balance);
-      $('#balance').text(balance)
-      bal = balance
-      var value = balance/50000
+      bal = Math.round(balance)
+      $('#balance').text(bal)
+      var value = bal/50000
       $('#circle').circleProgress({
       	value : value,
       	fill: {
