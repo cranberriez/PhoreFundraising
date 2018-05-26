@@ -68,6 +68,10 @@ $(function(){
     $('.donate-pop').addClass('hidden')
   })
 
+  $('.background-pop').on('click', function() {
+    $('.donate-pop').addClass('hidden')
+  })
+
   $('.address').on('click', function() {
     $('.address').select();
     document.execCommand("copy");
